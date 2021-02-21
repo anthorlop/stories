@@ -13,7 +13,7 @@
 
 
 ## 2. Interfaces implementation in your Application class (onCreate method).
-```
+``` kotlin
    // Image Loader Interface Implementation
    StoriesManager.getInstance().setImageInterface(object : ImageLoaderInterface {
         override fun loadImage(context: Context, url: String, imageView: ImageView) {
@@ -80,7 +80,7 @@ You have to create an array of avatars and a stories one. (See MainActivity.kt)
 
 You can set an URL to link the bottom text ("by anthorlop"), set null to hide it.
 You can select the scene time and the ads time.
-```
+``` kotlin
     // set bottom text URL link, time for scenes and time for ads
     StoriesManager.getInstance().set("http://lombrinus.com", 5, 5)
     
@@ -89,14 +89,14 @@ You can select the scene time and the ads time.
 ```
 
 ## 5. Get View Bar and add it to your container.
-```
+``` kotlin
     findViewById<FrameLayout>(R.id.stories_bar_container).addView(
                 StoriesManager.getInstance().getBarView(this, avatars, stories)
 ```
 
 
 ## 6. Refresh View Bar if you want to update the viewed stories.
-```
+``` kotlin
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
@@ -112,7 +112,7 @@ You can select the scene time and the ads time.
 You can customize your stories overriding colors, texts or icons in your app.
 
 Colors.xml:
-```
+``` xml
     <color name="storie_stroke">#FF0000</color>
     <color name="storie_small_stroke">#fff</color>
     <color name="storie_text">#000000</color>
@@ -120,12 +120,12 @@ Colors.xml:
     <color name="storie_ad_bg">#DADADA</color>
 ```
 Strings.xml:
-```
+``` xml
     <string name="stories_show_more">Ver más</string>
     <string name="provider_text"><![CDATA[<font color="#ffffff">by</font> <font color="#03DAC5">anthorlop</font>]]></string>
 ```
 Drawable icons:
-```
+``` xml
 ic_stories_close.png
 ic_stories_show_more.png
 ic_stories_volume_off.png
