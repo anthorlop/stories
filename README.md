@@ -1,7 +1,7 @@
 # Stories Lib
 
 ## 1. Add repository and dependency.
-```
+``` gradle
     repositories {
         maven { url 'https://github.com/anthorlop/mvn-android/raw/master/' }
     }
@@ -83,15 +83,18 @@ You can select the scene time and the ads time.
 ``` kotlin
     // set bottom text URL link, time for scenes and time for ads
     StoriesManager.getInstance().set("http://lombrinus.com", 5, 5)
-    
-    // set mode Avatars or Previews
-    StoriesManager.getInstance().modeBar = "avatars" // "previews"
 ```
 
 ## 5. Get View Bar and add it to your container.
+### Avatars mode
 ``` kotlin
     findViewById<FrameLayout>(R.id.stories_bar_container).addView(
                 StoriesManager.getInstance().getBarView(this, avatars, stories)
+```
+### Previews mode
+``` kotlin
+    findViewById<FrameLayout>(R.id.stories_bar_container).addView(
+                StoriesManager.getInstance().getBarViewModePreview(this, avatars, stories)
 ```
 
 
