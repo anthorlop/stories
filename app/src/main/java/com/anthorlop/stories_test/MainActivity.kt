@@ -20,8 +20,6 @@ class MainActivity : AppCompatActivity() {
 
             StoriesManager.getInstance().set("http://lombrinus.com", 5, 5)
 
-            StoriesManager.getInstance().modeBar = "avatars" // "previews"
-
             val stories: ArrayList<Story> = arrayListOf()
             val avatars: ArrayList<Avatar> = arrayListOf()
             val campaigns: ArrayList<Story>? = null
@@ -36,7 +34,8 @@ class MainActivity : AppCompatActivity() {
                         "# S$idAvatar",
                         false,
                         "Test",
-                        "http://lombrinus.com/pruebas/images/android-os.png"
+                        "http://lombrinus.com/pruebas/images/android-os.png",
+                            "http://lombrinus.com/pruebas/images/android-img-1.png"
                     )
                 )
 
@@ -61,7 +60,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             findViewById<FrameLayout>(R.id.stories_bar_container).addView(
-                StoriesManager.getInstance().getBarView(this, avatars, stories)
+                StoriesManager.getInstance().getBarViewModePreview(this, avatars, stories)
             )
         }
 

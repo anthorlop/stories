@@ -51,7 +51,7 @@ class StoriesApplication : MultiDexApplication() {
             }
         })
 
-        StoriesManager.getInstance().setstoriesInterface(object : StoriesInterface {
+        StoriesManager.getInstance().setInterface(object : StoriesInterface {
             override fun onShowMoreClicked(activity: Activity, idStory: Int, nameStory: String, storyType: String,
                                            idScene: Int, link: String) {
                 val intent = Intent(Intent.ACTION_VIEW)
