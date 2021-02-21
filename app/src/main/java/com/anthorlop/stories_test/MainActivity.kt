@@ -60,7 +60,8 @@ class MainActivity : AppCompatActivity() {
             }
 
             findViewById<FrameLayout>(R.id.stories_bar_container).addView(
-                StoriesManager.getInstance().getBarViewModePreview(this, avatars, stories)
+                StoriesManager.getInstance().getBarView(this, avatars, stories)
+            // StoriesManager.getInstance().getBarViewModePreview(this, avatars, stories)
             )
         }
 
