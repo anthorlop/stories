@@ -1,6 +1,6 @@
 include ':app'
 
- //include ':stories'
- //project (':stories').projectDir = new File('../stories_android/stories')
+// include ':stories'
+// project (':stories').projectDir = new File('../stories_android/stories')
 
 rootProject.name = "stories_app"
