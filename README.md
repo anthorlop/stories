@@ -7,7 +7,7 @@
     }
     ....
     dependencies {
-        implementation 'com.anthorlop.components:Stories:1.0.0'
+        implementation 'com.anthorlop.components:Stories:1.0.2'
     }
 ```
 
@@ -112,16 +112,46 @@ You can select the scene time and the ads time.
 
 ## Custom colors, texts and icons.
 
-You can customize your stories overriding colors, texts or icons in your app.
+You can customize your stories overriding colors, dimensions, texts or icons in your app.
+
+![](stories_resources.png)
 
 Colors.xml:
 ``` xml
-    <color name="storie_stroke">#FF0000</color>
-    <color name="storie_small_stroke">#fff</color>
-    <color name="storie_text">#000000</color>
-    <color name="storie_ad_text">#242424</color>
-    <color name="storie_ad_bg">#DADADA</color>
+    <color name="avatar_stroke">#FF0000</color>
+    <color name="avatar_stroke_bottom">#992222</color>
+    <color name="avatar_stroke_inside">#fff</color>
+    <color name="avatar_small_stroke">#fff</color>
+    <color name="avatar_text">#000000</color>
+    <color name="avatar_ad_text">#242424</color>
+    <color name="avatar_ad_bg">#DADADA</color>
 ```
+Dimen.xml
+``` xml
+    <dimen name="story_text">11sp</dimen>
+
+    <!-- Avatar list -->
+    <dimen name="story_avatar_cardview">72dp</dimen>
+    <dimen name="story_avatar_cardview_radius">36dp</dimen>
+
+    <dimen name="story_avatar_inside_cardview">68dp</dimen>
+    <dimen name="story_avatar_inside_cardview_radius">34dp</dimen>
+
+    <dimen name="story_avatar_img">62dp</dimen>
+    <dimen name="story_avatar_img_radius">31dp</dimen>
+
+
+    <!-- Small story detail avatar -->
+    <dimen name="story_avatar_small_cardview">42dp</dimen>
+    <dimen name="story_avatar_small_cardview_radius">21dp</dimen>
+
+    <dimen name="story_avatar_small_inside_cardview">40dp</dimen>
+    <dimen name="story_avatar_small_inside_cardview_radius">20dp</dimen>
+
+    <dimen name="story_avatar_small_img">36dp</dimen>
+    <dimen name="story_avatar_small_img_radius">18dp</dimen>
+```
+
 Strings.xml:
 ``` xml
     <string name="stories_show_more">Ver más</string>
